@@ -1,0 +1,1689 @@
+﻿
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Legacy - Kad Kahwin Digital RSVP Premium, Moden & Tradisional Melayu</title>
+    <!-- Tailwind CSS for utility styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for exquisite wedding typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons for visual enhancements -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        vibes: ['Great Vibes', 'cursive'],
+                        playfair: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        wedding: {
+                            gold: '#C29C47',
+                            goldLight: '#DFBA6B',
+                            goldDark: '#9C7A31',
+                            cream: '#FDFBF7',
+                            nude: '#FAF4EB',
+                            emerald: '#073B24',
+                            emeraldLight: '#0B5937',
+                            charcoal: '#111111',
+                            accent: '#E6C186'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Premium Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C29C47;
+            border-radius: 4px;
+        }
+        
+        /* Shimmer Gold Text Effect */
+        .gold-shimmer {
+            background: linear-gradient(to right, #9C7A31 0%, #DFBA6B 25%, #9C7A31 50%, #DFBA6B 75%, #9C7A31 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shine 4s linear infinite;
+        }
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        /* Glassmorphism effects */
+        .glass-premium {
+            background: rgba(253, 251, 247, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(194, 156, 71, 0.2);
+        }
+
+        /* Songket Pattern Background representation in pure CSS */
+        .bg-songket-gold {
+            background-color: #073B24;
+            background-image: 
+                radial-gradient(circle at 50% 50%, transparent 45%, #C29C47 45%, #C29C47 50%, transparent 50%),
+                radial-gradient(circle at 100% 100%, transparent 45%, #C29C47 45%, #C29C47 50%, transparent 50%),
+                radial-gradient(circle at 0% 0%, transparent 45%, #C29C47 45%, #C29C47 50%, transparent 50%);
+            background-size: 24px 24px;
+            opacity: 0.15;
+        }
+
+        /* Soft Floating Keyframes for Romance vibe */
+        .float-slow {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Live Preview Simulator Screens styling (Simulated mobile screen 9:16 aspect ratio) */
+        .mobile-frame-container {
+            position: relative;
+            width: 320px;
+            height: 640px;
+            box-shadow: 0 25px 50px -12px rgba(156, 122, 49, 0.25);
+            border-radius: 40px;
+            border: 12px solid #1a1a1a;
+            overflow: hidden;
+            background: #FAF8F5;
+        }
+
+        /* Theme Styling Configurations for preview simulator */
+        .theme-preview-wrapper {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Theme 1: Premium Modern Malay (Cream/Gold) */
+        .preview-theme-modern-cream {
+            background: #FDFBF7;
+            color: #2F2A1E;
+        }
+        .preview-theme-modern-cream .theme-text-gold {
+            background: linear-gradient(135deg, #DFBA6B 0%, #9C7A31 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .preview-theme-modern-cream .theme-btn {
+            background: linear-gradient(135deg, #C29C47 0%, #9C7A31 100%);
+            color: white;
+        }
+        .preview-theme-modern-cream .theme-border {
+            border-color: rgba(194, 156, 71, 0.3);
+        }
+
+        /* Theme 2: Traditional Malay (Royal Emerald/Songket) */
+        .preview-theme-traditional-emerald {
+            background: #052617;
+            color: #FAF4EB;
+            background-image: linear-gradient(rgba(5, 38, 23, 0.93), rgba(5, 38, 23, 0.95)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><path d="M30 0 L60 30 L30 60 L0 30 Z" fill="none" stroke="%23C29C47" stroke-width="0.5" opacity="0.3"/></svg>');
+            background-size: 30px 30px;
+        }
+        .preview-theme-traditional-emerald .theme-text-gold {
+            color: #E6C186;
+        }
+        .preview-theme-traditional-emerald .theme-btn {
+            background: #C29C47;
+            color: #052617;
+            font-weight: 700;
+        }
+        .preview-theme-traditional-emerald .theme-border {
+            border-color: rgba(230, 193, 134, 0.4);
+        }
+
+        /* Theme 3: Ultra Minimalist (Nude & White) */
+        .preview-theme-ultra-minimalist {
+            background: #FFFFFF;
+            color: #333333;
+        }
+        .preview-theme-ultra-minimalist .theme-text-gold {
+            color: #111111;
+        }
+        .preview-theme-ultra-minimalist .theme-btn {
+            background: #111111;
+            color: #FFFFFF;
+        }
+        .preview-theme-ultra-minimalist .theme-border {
+            border-color: #EAEAEA;
+        }
+
+        /* Theme 4: Luxury Black & Gold */
+        .preview-theme-luxury-black {
+            background: #111111;
+            color: #FAF4EB;
+            background-image: radial-gradient(circle at center, #222222 0%, #111111 100%);
+        }
+        .preview-theme-luxury-black .theme-text-gold {
+            background: linear-gradient(135deg, #FFE7A3 0%, #C29C47 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .preview-theme-luxury-black .theme-btn {
+            background: linear-gradient(135deg, #E6C186 0%, #9C7A31 100%);
+            color: #111111;
+            font-weight: bold;
+        }
+        .preview-theme-luxury-black .theme-border {
+            border-color: rgba(194, 156, 71, 0.5);
+        }
+
+        /* Theme 5: Romantic Garden */
+        .preview-theme-romantic-garden {
+            background: #FFF9F9;
+            color: #4A3E3E;
+            background-image: linear-gradient(rgba(255, 249, 249, 0.85), rgba(255, 249, 249, 0.85)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="10" cy="10" r="2" fill="%23FFC0CB" opacity="0.4"/><circle cx="90" cy="80" r="3" fill="%23FFC0CB" opacity="0.4"/></svg>');
+        }
+        .preview-theme-romantic-garden .theme-text-gold {
+            color: #D38B8B;
+        }
+        .preview-theme-romantic-garden .theme-btn {
+            background: #D38B8B;
+            color: white;
+        }
+        .preview-theme-romantic-garden .theme-border {
+            border-color: rgba(211, 139, 139, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-wedding-cream font-sans text-stone-800 overflow-x-hidden">
+
+    <!-- TOP HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 transition-all duration-300 glass-premium py-3 px-4 lg:px-8 shadow-sm">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="599828.png" alt="AJ Legacy Logo" class="w-12 h-12 rounded-full border border-wedding-gold shadow-md object-cover" onerror="this.src='https://placehold.co/100x100?text=AJ'">
+                <div>
+                    <span class="font-cinzel font-bold text-lg tracking-wider text-wedding-goldDark block leading-none">AJ LEGACY</span>
+                    <span class="text-[10px] tracking-widest text-stone-500 uppercase font-medium">Heritage &bull; Hustle &bull; Honor</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-stone-700">
+                <a href="#kelebihan" class="hover:text-wedding-gold transition-colors">Kelebihan</a>
+                <a href="#demo" class="hover:text-wedding-gold transition-colors">Bina Kad (Live)</a>
+                <a href="#katalog" class="hover:text-wedding-gold transition-colors">20 Reka Bentuk</a>
+                <a href="#pakej" class="hover:text-wedding-gold transition-colors">Pakej Harga</a>
+                <a href="#soalan" class="hover:text-wedding-gold transition-colors">Soalan Lazim</a>
+            </nav>
+            <div>
+                <a href="#demo" class="bg-gradient-to-r from-wedding-gold to-wedding-goldDark hover:from-wedding-goldDark hover:to-wedding-gold text-white font-semibold text-xs lg:text-sm px-5 py-2.5 rounded-full transition-all duration-300 shadow-md transform hover:-translate-y-0.5 inline-block">Bina Kad Anda Sekarang</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- FLOATING LIVE CONVERSION BANNER (Social Proof) -->
+    <div class="bg-wedding-emerald text-wedding-cream py-2 px-4 text-center text-xs md:text-sm font-medium relative z-40 shadow-inner flex items-center justify-center gap-2">
+        <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+        </span>
+        <span><strong>Tawaran Kemuncak Musim Kahwin 2026:</strong> Diskaun sehingga 75% untuk 100 pasangan terawal hari ini sahaja! <span class="underline text-wedding-accent">Baki slot: 7 Slot Terakhir</span></span>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-12 lg:py-20 px-4 bg-gradient-to-b from-wedding-nude via-wedding-cream to-white overflow-hidden">
+        <!-- Background Ornaments -->
+        <div class="absolute top-10 left-[-5%] w-72 h-72 rounded-full bg-wedding-accent opacity-10 blur-3xl"></div>
+        <div class="absolute bottom-10 right-[-5%] w-96 h-96 rounded-full bg-wedding-gold opacity-10 blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left: High Impact Sales Copywriting -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left z-10">
+                <div class="inline-flex items-center gap-2 bg-wedding-gold/10 border border-wedding-gold/30 px-3 py-1.5 rounded-full text-xs text-wedding-goldDark font-semibold tracking-wider uppercase">
+                    <i class="fa-solid fa-gem"></i> Premium Malay Wedding Invitation
+                </div>
+                
+                <h1 class="font-cinzel font-black text-3xl md:text-5xl lg:text-6xl text-stone-900 leading-tight">
+                    Ubah Kad Kahwin Anda Ke Era <span class="gold-shimmer font-black">Digital Premium &amp; Eksklusif</span>
+                </h1>
+                
+                <p class="font-sans text-stone-600 text-base md:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    Kagumkan tetamu anda dengan reka bentuk jemputan pintar alur mewah (RSVP) berasaskan estetika Melayu Tradisional (Songket &amp; Batik) digabungkan dengan Teknologi Interaktif Moden. Urus kehadiran tetamu sepantas satu klik!
+                </p>
+
+                <!-- Key benefits quick check -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3 pt-2 text-stone-700 text-xs md:text-sm font-medium text-left max-w-xl mx-auto lg:mx-0">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-wedding-gold"></i>
+                        <span>Atur RSVP Automatik</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-wedding-gold"></i>
+                        <span>Muzik Latar Belakang</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-wedding-gold"></i>
+                        <span>Waze & Google Maps</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-wedding-gold"></i>
+                        <span>Countdown & Galeri</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-wedding-gold"></i>
+                        <span>Ucapan & Slaid Foto</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-wedding-gold"></i>
+                        <span>Sistem Kehadiran QR</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#demo" class="w-full sm:w-auto text-center bg-gradient-to-r from-wedding-gold to-wedding-goldDark hover:scale-105 transition-transform text-white font-bold px-8 py-4 rounded-full shadow-lg text-base tracking-wide flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Cuba Pembina Kad (Live)
+                    </a>
+                    <a href="#katalog" class="w-full sm:w-auto text-center border-2 border-wedding-gold hover:bg-wedding-gold/10 text-wedding-goldDark font-semibold px-8 py-4 rounded-full transition-colors text-base">
+                        Lihat 20 Koleksi Template
+                    </a>
+                </div>
+
+                <!-- Trust signals -->
+                <div class="pt-6 border-t border-stone-200/60 max-w-xl mx-auto lg:mx-0">
+                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start text-stone-500 text-xs">
+                        <div class="flex -space-x-3">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop" alt="User">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&fit=crop" alt="User">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&fit=crop" alt="User">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&fit=crop" alt="User">
+                        </div>
+                        <div class="text-center sm:text-left">
+                            <p class="font-bold text-stone-800 text-sm">Dipercayai oleh 12,500+ Pasangan Pengantin</p>
+                            <p>Penarafan kepuasan 4.9/5 daripada pengguna Malaysia & Singapura</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Beautiful Visual Graphic Hero & Interactive Preview teaser -->
+            <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
+                <div class="absolute -z-10 w-80 h-80 rounded-full border border-wedding-gold/20 animate-spin-slow"></div>
+                
+                <!-- Main Badge Image (Logo provided in Prompt) -->
+                <div class="mb-6 relative group">
+                    <div class="absolute -inset-1.5 bg-gradient-to-r from-wedding-gold to-wedding-goldLight rounded-full blur opacity-40 group-hover:opacity-60 transition duration-1000"></div>
+                    <img src="599828.png" alt="AJ Legacy Wedding Premium Badge" class="relative w-36 h-36 rounded-full border-2 border-wedding-gold shadow-2xl object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/150x150?text=AJ+Legacy'">
+                </div>
+
+                <!-- Teaser of 9:16 Invitation -->
+                <div class="relative transform rotate-2 hover:rotate-0 transition-all duration-500 hover:scale-105 shadow-2xl rounded-[32px] overflow-hidden border-4 border-white">
+                    <div class="bg-wedding-emerald text-wedding-cream p-4 w-64 text-center text-xs font-semibold uppercase tracking-widest">
+                        Preview Terhangat
+                    </div>
+                    <div class="bg-cover bg-center h-80 w-64 relative flex flex-col justify-end p-4 text-white" style="background-image: linear-gradient(to top, rgba(7,59,36,0.95), rgba(7,59,36,0.3)), url('https://images.unsplash.com/photo-1519741497674-611481863552?w=500&fit=crop');">
+                        <div class="text-center space-y-2">
+                            <p class="font-vibes text-4xl text-wedding-accent">Amir &amp; Jasmin</p>
+                            <p class="text-[10px] tracking-widest font-bold text-stone-300">SABTU, 12 DISEMBER 2026</p>
+                            <span class="inline-block text-[9px] bg-wedding-gold text-wedding-emerald px-2 py-1 rounded-full font-bold">TEROKA JEMPUTAN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TRUST STATS / SOCIAL PROOF BAR -->
+    <section class="bg-wedding-nude/80 border-y border-wedding-gold/20 py-8 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+                <span class="block text-3xl md:text-4xl font-cinzel font-bold text-wedding-goldDark">100%</span>
+                <span class="text-xs md:text-sm text-stone-600 font-medium">Urus RSVP Tanpa Ralat</span>
+            </div>
+            <div>
+                <span class="block text-3xl md:text-4xl font-cinzel font-bold text-wedding-goldDark">RM500+</span>
+                <span class="text-xs md:text-sm text-stone-600 font-medium">Purata Penjimatan Kos Cetak</span>
+            </div>
+            <div>
+                <span class="block text-3xl md:text-4xl font-cinzel font-bold text-wedding-goldDark">&lt; 3 Minit</span>
+                <span class="text-xs md:text-sm text-stone-600 font-medium">Masa Untuk Bina &amp; Kongsi</span>
+            </div>
+            <div>
+                <span class="block text-3xl md:text-4xl font-cinzel font-bold text-wedding-goldDark">20+</span>
+                <span class="text-xs md:text-sm text-stone-600 font-medium">Tema Tradisional &amp; Moden</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE DIGITAL RSVP FOR MALAY WEDDING? -->
+    <section id="kelebihan" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center space-y-3 mb-12">
+            <span class="text-wedding-gold font-bold text-sm tracking-widest uppercase block">Kelebihan Eksklusif</span>
+            <h2 class="font-cinzel font-bold text-2xl md:text-4xl text-stone-900">Mengapa Perlu Guna AJ Legacy RSVP?</h2>
+            <p class="text-stone-600 text-sm md:text-base max-w-xl mx-auto">Tinggalkan kad kertas lapuk yang mudah hilang, tukar ke pengurusan perkahwinan digital serba pintar.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-xl transition-all duration-300 space-y-4">
+                <div class="w-12 h-12 bg-wedding-gold/10 rounded-xl flex items-center justify-center text-wedding-goldDark text-xl">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <h3 class="font-cinzel font-bold text-lg text-stone-900">Urus Tetamu RSVP Automatik</h3>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    Tetamu hanya perlu klik kehadiran melalui borang digital. Jawapan mereka terus dihantar ke WhatsApp anda atau disimpan dalam pangkalan data tersusun. Tiada lagi kekeliruan jumlah meja!
+                </p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-xl transition-all duration-300 space-y-4">
+                <div class="w-12 h-12 bg-wedding-emerald/10 rounded-xl flex items-center justify-center text-wedding-emerald text-xl">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <h3 class="font-cinzel font-bold text-lg text-stone-900">Integrasi Peta (Google Maps &amp; Waze)</h3>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    Tetamu tidak sesat lagi ke dewan atau rumah anda. Hanya satu butang, navigasi peta terus dibuka dalam telefon mereka secara tepat.
+                </p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-xl transition-all duration-300 space-y-4">
+                <div class="w-12 h-12 bg-wedding-gold/10 rounded-xl flex items-center justify-center text-wedding-goldDark text-xl">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+                <h3 class="font-cinzel font-bold text-lg text-stone-900">Muzik Latar Belakang &amp; Slaid Foto</h3>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    Wujudkan suasana romantik bercirikan Melayu bertaraf diraja dengan muzik iringan syahdu serta slot galeri foto pra-perkahwinan (pre-wedding) yang estetik.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE LIVE CUSTOMIZER & SIMULATOR (Great UX!) -->
+    <section id="demo" class="py-16 px-4 bg-gradient-to-r from-wedding-nude to-wedding-cream border-y border-wedding-gold/10">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center space-y-3 mb-12">
+                <span class="bg-wedding-gold/10 text-wedding-goldDark px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest inline-block">Teknologi Eksklusif</span>
+                <h2 class="font-cinzel font-bold text-3xl md:text-5xl text-stone-900">Live Editor &amp; Mobile Simulator</h2>
+                <p class="text-stone-600 text-sm md:text-base max-w-xl mx-auto">Cuba reka bentuk kad jemputan anda sekarang secara langsung! Tukar input sebelah kiri dan lihat rekaan dalam telefon bimbit dikemaskini dalam masa nyata.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left: Interactive Customizer Form Controls -->
+                <div class="lg:col-span-6 bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-wedding-gold/20 space-y-6">
+                    <h3 class="font-cinzel font-bold text-xl text-stone-950 pb-4 border-b border-stone-100 flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-wedding-gold"></i> Sesuaikan Butiran Kad Jemputan
+                    </h3>
+
+                    <!-- Theme Selection (5 core requested themes) -->
+                    <div class="space-y-3">
+                        <label class="block text-xs font-bold tracking-wider text-stone-700 uppercase">1. Pilih Tema Reka Bentuk Utama</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                            <!-- Theme 1 Card -->
+                            <button onclick="setTheme('modern-cream')" id="btn-theme-modern-cream" class="theme-select-btn p-3 rounded-xl border-2 border-wedding-gold text-left transition-all duration-300 bg-wedding-cream text-xs">
+                                <span class="block font-bold text-stone-900">Cream Modern</span>
+                                <span class="text-[10px] text-stone-500">Elegant &amp; Minimalist</span>
+                            </button>
+                            <!-- Theme 2 Card -->
+                            <button onclick="setTheme('traditional-emerald')" id="btn-theme-traditional-emerald" class="theme-select-btn p-3 rounded-xl border border-stone-200 text-left transition-all duration-300 bg-wedding-emerald text-wedding-cream text-xs">
+                                <span class="block font-bold">Traditional Emerald</span>
+                                <span class="text-[10px] opacity-80">Royal Songket Motif</span>
+                            </button>
+                            <!-- Theme 3 Card -->
+                            <button onclick="setTheme('ultra-minimalist')" id="btn-theme-ultra-minimalist" class="theme-select-btn p-3 rounded-xl border border-stone-200 text-left transition-all duration-300 bg-white text-stone-950 text-xs">
+                                <span class="block font-bold">Ultra Minimalist</span>
+                                <span class="text-[10px] text-stone-500">Pure White Elegance</span>
+                            </button>
+                            <!-- Theme 4 Card -->
+                            <button onclick="setTheme('luxury-black')" id="btn-theme-luxury-black" class="theme-select-btn p-3 rounded-xl border border-stone-200 text-left transition-all duration-300 bg-stone-900 text-wedding-goldLight text-xs">
+                                <span class="block font-bold">Luxury Black &amp; Gold</span>
+                                <span class="text-[10px] opacity-80">Cinematic Glow</span>
+                            </button>
+                            <!-- Theme 5 Card -->
+                            <button onclick="setTheme('romantic-garden')" id="btn-theme-romantic-garden" class="theme-select-btn p-3 rounded-xl border border-stone-200 text-left transition-all duration-300 bg-pink-50 text-pink-700 text-xs">
+                                <span class="block font-bold">Romantic Garden</span>
+                                <span class="text-[10px] text-pink-500">Pastel Bloom</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Input Fields -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="block text-xs font-bold text-stone-700 uppercase">Nama Pengantin Lelaki</label>
+                            <input type="text" id="inputGroom" oninput="updatePreview()" value="Aizat" class="w-full px-4 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:border-wedding-gold text-sm font-semibold text-stone-800">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="block text-xs font-bold text-stone-700 uppercase">Nama Pengantin Perempuan</label>
+                            <input type="text" id="inputBride" oninput="updatePreview()" value="Jasmin" class="w-full px-4 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:border-wedding-gold text-sm font-semibold text-stone-800">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="block text-xs font-bold text-stone-700 uppercase">Tarikh Kahwin</label>
+                            <input type="date" id="inputDate" oninput="updatePreview()" value="2026-12-12" class="w-full px-4 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:border-wedding-gold text-sm font-semibold text-stone-800">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="block text-xs font-bold text-stone-700 uppercase">Masa Majlis</label>
+                            <input type="text" id="inputTime" oninput="updatePreview()" value="11:00 Pagi - 4:00 Petang" class="w-full px-4 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:border-wedding-gold text-sm font-semibold text-stone-800">
+                        </div>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="block text-xs font-bold text-stone-700 uppercase">Nama Dewan / Venue</label>
+                        <input type="text" id="inputVenue" oninput="updatePreview()" value="Dewan Kasturi Diraja, Bukit Damansara, KL" class="w-full px-4 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:border-wedding-gold text-sm font-semibold text-stone-800">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="block text-xs font-bold text-stone-700 uppercase">No. Telefon WhatsApp (RSVP)</label>
+                            <input type="text" id="inputWhatsApp" oninput="updatePreview()" value="0123456789" class="w-full px-4 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:border-wedding-gold text-sm font-semibold text-stone-800">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="block text-xs font-bold text-stone-700 uppercase">Pilih Lagu Pengiring</label>
+                            <select id="inputMusic" onchange="updateMusicSelection()" class="w-full px-4 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:border-wedding-gold text-sm font-semibold text-stone-800">
+                                <option value="gamelan">Gamelan Diraja Melayu (Sintesis)</option>
+                                <option value="violin">Melodi Piano Romantik (Sintesis)</option>
+                                <option value="acoustic">Gitar Klasik Romantis (Sintesis)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Live Conversion Prompt -->
+                    <div class="bg-wedding-emerald/5 border border-wedding-emerald/20 p-4 rounded-2xl flex items-start gap-3">
+                        <i class="fa-solid fa-bell-concierge text-wedding-emerald text-lg mt-0.5 animate-bounce"></i>
+                        <div class="text-xs text-stone-600">
+                            <p class="font-bold text-wedding-emerald">Bonus Eksklusif Percuma Hari Ini:</p>
+                            <p class="mt-0.5">Sistem RSVP automatik ini boleh terus dihubungkan terus ke WhatsApp anda. Tetamu boleh klik butang RSVP dalam telefon dan butiran pendaftaran terus masuk ke telefon anda dengan rapi!</p>
+                        </div>
+                    </div>
+
+                    <!-- Call To Action Inside Editor -->
+                    <div class="pt-4 border-t border-stone-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="text-center sm:text-left">
+                            <span class="text-xs text-stone-400 line-through block">Harga Biasa: RM199</span>
+                            <span class="text-lg font-black text-wedding-goldDark">Miliki Sekarang: RM49 sahaja!</span>
+                        </div>
+                        <a href="#pakej" class="w-full sm:w-auto text-center bg-wedding-emerald hover:bg-wedding-emeraldLight text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md transform hover:-translate-y-0.5 text-sm">
+                            Sahkan &amp; Beli Tema Ini <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Realistic 9:16 Smartphone Mockup with Simulated Interactive Wedding RSVP card -->
+                <div class="lg:col-span-6 flex flex-col items-center justify-center">
+                    <span class="text-xs font-bold text-stone-500 mb-2 uppercase tracking-widest"><i class="fa-solid fa-mobile-screen mr-1"></i> LIVE INTERACTIVE MOBILE PREVIEW</span>
+                    
+                    <div class="mobile-frame-container border-[10px] border-stone-900 bg-white relative shadow-2xl rounded-[40px] overflow-hidden">
+                        
+                        <!-- Header / Status Bar of the phone simulator -->
+                        <div class="absolute top-0 left-0 right-0 h-6 bg-stone-950/20 backdrop-blur-sm flex items-center justify-between px-6 z-30 text-[9px] text-white">
+                            <span>10:29 AM</span>
+                            <div class="w-20 h-3 bg-stone-950 rounded-b-xl absolute left-1/2 transform -translate-x-1/2 top-0"></div>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid fa-wifi"></i>
+                                <i class="fa-solid fa-battery-three-quarters"></i>
+                            </div>
+                        </div>
+
+                        <!-- Live Digital Invitation Content Inside the Simulator -->
+                        <div id="previewThemeWrapper" class="theme-preview-wrapper h-full overflow-y-auto pt-6 pb-12 preview-theme-modern-cream text-stone-800">
+                            
+                            <!-- Music Player Floating Visualizer inside Mockup -->
+                            <div class="sticky top-6 z-20 flex justify-end px-4 mt-2">
+                                <button onclick="toggleAudio()" class="w-10 h-10 rounded-full bg-white/95 text-wedding-goldDark shadow-lg flex items-center justify-center border border-wedding-gold/20 focus:outline-none relative group">
+                                    <i id="audioIcon" class="fa-solid fa-music"></i>
+                                    <!-- Visualizer bars -->
+                                    <span id="audioVisualizer" class="hidden absolute -bottom-1 flex gap-0.5">
+                                        <span class="w-1 h-3 bg-wedding-gold animate-pulse"></span>
+                                        <span class="w-1 h-4 bg-wedding-gold animate-bounce"></span>
+                                        <span class="w-1 h-2 bg-wedding-gold animate-pulse"></span>
+                                    </span>
+                                </button>
+                            </div>
+
+                            <!-- SCREEN 1: Invitation Cover (Gate/Envelope Style) -->
+                            <div id="previewCoverScreen" class="h-full flex flex-col justify-between items-center p-6 text-center text-stone-800 relative z-10">
+                                <div class="space-y-2 mt-4">
+                                    <!-- Mini Image Logo inside simulator -->
+                                    <img src="599828.png" alt="Logo" class="w-14 h-14 rounded-full border border-wedding-gold/30 mx-auto object-cover" onerror="this.src='https://placehold.co/100x100?text=AJ'">
+                                    <p class="text-[9px] tracking-widest uppercase font-bold text-wedding-gold">Walimatulurus</p>
+                                </div>
+
+                                <div class="space-y-4 my-auto">
+                                    <span class="text-xs font-semibold tracking-wide block">KAMI MEMBANTU JEMPUT</span>
+                                    <h4 class="font-vibes text-5xl theme-text-gold tracking-wide leading-tight py-2" id="prevTitleNames">Aizat &amp; Jasmin</h4>
+                                    <p class="text-[10px] font-bold tracking-widest theme-text-gold" id="prevDateText">SABTU, 12 DISEMBER 2026</p>
+                                </div>
+
+                                <div class="space-y-2 w-full pb-8">
+                                    <p class="text-[9px] text-stone-500 italic">"Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu..."</p>
+                                    <button onclick="openInvitationInsideMockup()" class="theme-btn w-full py-3 rounded-full text-xs font-bold tracking-widest uppercase shadow-md hover:scale-105 transition-transform">
+                                        Buka Kad Jemputan
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- SCREEN 2: Main Invitation Details Page (Initially hidden, revealed after opening) -->
+                            <div id="previewMainDetails" class="hidden p-5 space-y-6 text-center relative z-10">
+                                
+                                <div class="space-y-2 pt-2">
+                                    <p class="text-[10px] tracking-widest uppercase font-bold text-wedding-gold">Walimatulurus</p>
+                                    <p class="text-xs font-serif leading-relaxed text-stone-500">
+                                        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+                                    </p>
+                                    <p class="text-[10px] leading-relaxed max-w-[240px] mx-auto text-stone-500">
+                                        Dengan penuh rasa kesyukuran, kami menjemput Dato' / Datin / Tuan / Puan / Encik / Cik ke majlis perkahwinan anakanda kami:
+                                    </p>
+                                </div>
+
+                                <!-- Bride & Groom -->
+                                <div class="space-y-2 py-4 theme-border border-y">
+                                    <h4 class="font-vibes text-4xl theme-text-gold" id="prevGroomName">Aizat</h4>
+                                    <p class="text-[9px] text-stone-400 font-bold uppercase">&amp;</p>
+                                    <h4 class="font-vibes text-4xl theme-text-gold" id="prevBrideName">Jasmin</h4>
+                                </div>
+
+                                <!-- Date & Countdown -->
+                                <div class="space-y-3">
+                                    <p class="text-[10px] font-bold tracking-widest text-wedding-gold uppercase">Kiraan Detik Menanti Majlis</p>
+                                    <div class="grid grid-cols-4 gap-1.5 max-w-[220px] mx-auto text-center">
+                                        <div class="bg-black/5 rounded-lg p-1">
+                                            <span class="block text-sm font-bold theme-text-gold" id="daysVal">00</span>
+                                            <span class="text-[7px] uppercase tracking-wider text-stone-400 block">Hari</span>
+                                        </div>
+                                        <div class="bg-black/5 rounded-lg p-1">
+                                            <span class="block text-sm font-bold theme-text-gold" id="hoursVal">00</span>
+                                            <span class="text-[7px] uppercase tracking-wider text-stone-400 block">Jam</span>
+                                        </div>
+                                        <div class="bg-black/5 rounded-lg p-1">
+                                            <span class="block text-sm font-bold theme-text-gold" id="minsVal">00</span>
+                                            <span class="text-[7px] uppercase tracking-wider text-stone-400 block">Minit</span>
+                                        </div>
+                                        <div class="bg-black/5 rounded-lg p-1">
+                                            <span class="block text-sm font-bold theme-text-gold" id="secsVal">00</span>
+                                            <span class="text-[7px] uppercase tracking-wider text-stone-400 block">Saat</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Event Details Card -->
+                                <div class="bg-black/5 rounded-2xl p-4 text-center space-y-2">
+                                    <div class="w-6 h-6 rounded-full bg-wedding-gold/20 flex items-center justify-center text-wedding-goldDark text-xs mx-auto">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                    </div>
+                                    <p class="text-[10px] font-bold tracking-wider" id="prevFullDate">SABTU, 12 DISEMBER 2026</p>
+                                    <p class="text-[9px] text-stone-500" id="prevTimeLabel">11:00 Pagi - 4:00 Petang</p>
+                                    <p class="text-[9px] text-stone-600 font-medium" id="prevVenueLabel">Dewan Kasturi Diraja, Bukit Damansara, KL</p>
+                                </div>
+
+                                <!-- GPS & Map Links inside phone preview -->
+                                <div class="grid grid-cols-2 gap-2 max-w-[240px] mx-auto">
+                                    <a href="https://maps.google.com" target="_blank" class="theme-btn py-2 px-2 rounded-lg text-[9px] font-bold tracking-wider flex items-center justify-center gap-1">
+                                        <i class="fa-solid fa-map-pin"></i> Google Maps
+                                    </a>
+                                    <a href="https://waze.com" target="_blank" class="theme-btn py-2 px-2 rounded-lg text-[9px] font-bold tracking-wider flex items-center justify-center gap-1">
+                                        <i class="fa-solid fa-car"></i> Waze GPS
+                                    </a>
+                                </div>
+
+                                <!-- Interactive Simulated RSVP Form inside Phone -->
+                                <div class="bg-white rounded-2xl p-4 shadow-sm border border-stone-100 text-left space-y-3">
+                                    <h5 class="text-[10px] font-bold tracking-wider text-center theme-text-gold uppercase">Sahkan Kehadiran Anda (RSVP)</h5>
+                                    
+                                    <div class="space-y-1 text-[9px]">
+                                        <label class="block font-medium text-stone-600">Nama Penuh Tetamu</label>
+                                        <input type="text" id="simGuestName" placeholder="Masukkan nama anda" class="w-full p-1.5 rounded border border-stone-200 text-[10px]">
+                                    </div>
+                                    <div class="space-y-1 text-[9px]">
+                                        <label class="block font-medium text-stone-600">Pilihan Kehadiran</label>
+                                        <select id="simGuestAttendance" class="w-full p-1.5 rounded border border-stone-200 text-[10px]">
+                                            <option value="hadir">Sedia Hadir</option>
+                                            <option value="tidak_hadir">Maaf, Tidak Dapat Hadir</option>
+                                        </select>
+                                    </div>
+                                    <button onclick="submitRSVPSimulation()" class="theme-btn w-full py-2 rounded text-[10px] font-bold uppercase text-center block">
+                                        Hantar Kehadiran RSVP
+                                    </button>
+                                </div>
+
+                                <!-- Photo Gallery preview -->
+                                <div class="space-y-2">
+                                    <p class="text-[9px] font-bold tracking-widest text-wedding-gold uppercase">Galeri Foto Pengantin</p>
+                                    <div class="grid grid-cols-3 gap-1">
+                                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=150&fit=crop" class="w-full h-14 object-cover rounded" alt="Gallery">
+                                        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=150&fit=crop" class="w-full h-14 object-cover rounded" alt="Gallery">
+                                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=150&fit=crop" class="w-full h-14 object-cover rounded" alt="Gallery">
+                                    </div>
+                                </div>
+
+                                <!-- Guestbook Wishes simulation inside preview -->
+                                <div class="space-y-2 text-left">
+                                    <p class="text-[9px] font-bold tracking-widest text-wedding-gold text-center uppercase">Ucapan Tetamu</p>
+                                    <div id="prevWishesContainer" class="space-y-2 max-h-24 overflow-y-auto bg-stone-50 p-2 rounded-lg text-[9px]">
+                                        <div class="border-b border-stone-100 pb-1">
+                                            <strong class="text-stone-700">Ahmad Fauzi:</strong> <span class="text-stone-500">Selamat pengantin baru! Semoga kekal hingga ke Jannah.</span>
+                                        </div>
+                                        <div>
+                                            <strong class="text-stone-700">Siti Sarah:</strong> <span class="text-stone-500">Tahniah Jasmin &amp; pasangan! Tak sabar nak datang makan nasi minyak.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pt-4 text-[8px] text-stone-400">
+                                    Kad Digital dihoskan oleh AJ Legacy
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- THE 20 PREMIUM TEMPLATES CATALOG SHOWCASE -->
+    <section id="katalog" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center space-y-3 mb-12">
+                <span class="text-wedding-gold font-bold text-sm tracking-widest uppercase block">Koleksi 2026 Terbaru</span>
+                <h2 class="font-cinzel font-bold text-3xl md:text-5xl text-stone-900">Miliki 20 Pilihan Design Premium</h2>
+                <p class="text-stone-600 text-sm md:text-base max-w-xl mx-auto">Satu harga murah untuk akses semua template tercanggih. Anda boleh pilih reka bentuk mengikut konsep idaman anda.</p>
+            </div>
+
+            <!-- Categories / Filter (Simulated interaction) -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10">
+                <button onclick="filterCatalog('semua')" class="px-5 py-2 rounded-full text-xs font-semibold bg-wedding-gold text-white shadow-md transition-colors filter-tab">Semua Design (20)</button>
+                <button onclick="filterCatalog('tradisional')" class="px-5 py-2 rounded-full text-xs font-semibold bg-wedding-nude text-stone-700 hover:bg-wedding-gold hover:text-white transition-colors filter-tab">Tradisional Melayu (Batik/Songket)</button>
+                <button onclick="filterCatalog('moden')" class="px-5 py-2 rounded-full text-xs font-semibold bg-wedding-nude text-stone-700 hover:bg-wedding-gold hover:text-white transition-colors filter-tab">Moden &amp; Minimalis</button>
+                <button onclick="filterCatalog('mewah')" class="px-5 py-2 rounded-full text-xs font-semibold bg-wedding-nude text-stone-700 hover:bg-wedding-gold hover:text-white transition-colors filter-tab">Mewah (Emas/Gelap)</button>
+            </div>
+
+            <!-- Grid of 20 premium template cards -->
+            <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 (Requested theme type) -->
+                <div class="bg-wedding-nude/40 rounded-2xl p-4 border border-wedding-gold/10 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="moden">
+                    <div class="space-y-3">
+                        <div class="bg-stone-100 rounded-xl h-48 w-full bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=300&fit=crop');">
+                            <span class="absolute top-2 right-2 bg-wedding-gold text-white text-[9px] font-bold px-2 py-1 rounded">HOT SELLER</span>
+                        </div>
+                        <h3 class="font-cinzel font-bold text-base text-stone-900">#01 - Modern Premium Ivory</h3>
+                        <p class="text-stone-600 text-xs">Aesthetic cream, gold borders, clean typography, minimalist &amp; cinematic layout.</p>
+                    </div>
+                    <button onclick="applyCatalogTemplate('modern-cream')" class="mt-4 w-full bg-wedding-gold hover:bg-wedding-goldDark text-white text-xs font-bold py-2 rounded-lg transition-colors">
+                        Cuba &amp; Sunting Template
+                    </button>
+                </div>
+
+                <!-- Card 2 (Requested theme type) -->
+                <div class="bg-wedding-nude/40 rounded-2xl p-4 border border-wedding-gold/10 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="tradisional">
+                    <div class="space-y-3">
+                        <div class="bg-stone-100 rounded-xl h-48 w-full bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?w=300&fit=crop');">
+                            <span class="absolute top-2 right-2 bg-wedding-emerald text-white text-[9px] font-bold px-2 py-1 rounded">ROYAL TEMA</span>
+                        </div>
+                        <h3 class="font-cinzel font-bold text-base text-stone-900">#02 - Royal Emerald Songket</h3>
+                        <p class="text-stone-600 text-xs">Traditional gold Songket pattern overlay with rich emerald green, elegant royal feel.</p>
+                    </div>
+                    <button onclick="applyCatalogTemplate('traditional-emerald')" class="mt-4 w-full bg-wedding-gold hover:bg-wedding-goldDark text-white text-xs font-bold py-2 rounded-lg transition-colors">
+                        Cuba &amp; Sunting Template
+                    </button>
+                </div>
+
+                <!-- Card 3 (Requested theme type) -->
+                <div class="bg-wedding-nude/40 rounded-2xl p-4 border border-wedding-gold/10 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="moden">
+                    <div class="space-y-3">
+                        <div class="bg-stone-100 rounded-xl h-48 w-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=300&fit=crop');"></div>
+                        <h3 class="font-cinzel font-bold text-base text-stone-900">#03 - Ultra Minimalist White</h3>
+                        <p class="text-stone-600 text-xs">Pure clean look, soft shadows, pristine white and nude tones with exquisite line borders.</p>
+                    </div>
+                    <button onclick="applyCatalogTemplate('ultra-minimalist')" class="mt-4 w-full bg-wedding-gold hover:bg-wedding-goldDark text-white text-xs font-bold py-2 rounded-lg transition-colors">
+                        Cuba &amp; Sunting Template
+                    </button>
+                </div>
+
+                <!-- Card 4 (Requested theme type) -->
+                <div class="bg-wedding-nude/40 rounded-2xl p-4 border border-wedding-gold/10 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="mewah">
+                    <div class="space-y-3">
+                        <div class="bg-stone-100 rounded-xl h-48 w-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1507504038482-762103743ec5?w=300&fit=crop');"></div>
+                        <h3 class="font-cinzel font-bold text-base text-stone-900">#04 - Luxury Black &amp; Gold</h3>
+                        <p class="text-stone-600 text-xs">Midnight black, dark marble texture, shimmering golden typography, cinematic layout.</p>
+                    </div>
+                    <button onclick="applyCatalogTemplate('luxury-black')" class="mt-4 w-full bg-wedding-gold hover:bg-wedding-goldDark text-white text-xs font-bold py-2 rounded-lg transition-colors">
+                        Cuba &amp; Sunting Template
+                    </button>
+                </div>
+
+                <!-- Card 5 (Requested theme type) -->
+                <div class="bg-wedding-nude/40 rounded-2xl p-4 border border-wedding-gold/10 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="moden">
+                    <div class="space-y-3">
+                        <div class="bg-stone-100 rounded-xl h-48 w-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=300&fit=crop');"></div>
+                        <h3 class="font-cinzel font-bold text-base text-stone-900">#05 - Romantic Garden</h3>
+                        <p class="text-stone-600 text-xs">Pastel floral decorations, warm sunlight overlays, soft feminine aesthetic &amp; cursive fonts.</p>
+                    </div>
+                    <button onclick="applyCatalogTemplate('romantic-garden')" class="mt-4 w-full bg-wedding-gold hover:bg-wedding-goldDark text-white text-xs font-bold py-2 rounded-lg transition-colors">
+                        Cuba &amp; Sunting Template
+                    </button>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-wedding-nude/40 rounded-2xl p-4 border border-wedding-gold/10 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="tradisional">
+                    <div class="space-y-3">
+                        <div class="bg-stone-100 rounded-xl h-48 w-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=300&fit=crop');"></div>
+                        <h3 class="font-cinzel font-bold text-base text-stone-900">#06 - Songket Pink Pastel</h3>
+                        <p class="text-stone-600 text-xs">Soft rose-colored Songket weave with elegant golden thread motifs for sweet traditional weddings.</p>
+                    </div>
+                    <button onclick="applyCatalogTemplate('romantic-garden')" class="mt-4 w-full bg-wedding-gold hover:bg-wedding-goldDark text-white text-xs font-bold py-2 rounded-lg transition-colors">
+                        Cuba &amp; Sunting Template
+                    </button>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="bg-wedding-nude/40 rounded-2xl p-4 border border-wedding-gold/10 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="mewah">
+                    <div class="space-y-3">
+                        <div class="bg-stone-100 rounded-xl h-48 w-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1519225495810-7512c696505a?w=300&fit=crop');"></div>
+                        <h3 class="font-cinzel font-bold text-base text-stone-900">#07 - Sultanate Navy &amp; Gold</h3>
+                        <p class="text-stone-600 text-xs">Deep navy blue paired with traditional Royal gold crest outline for high status look.</p>
+                    </div>
+                    <button onclick="applyCatalogTemplate('luxury-black')" class="mt-4 w-full bg-wedding-gold hover:bg-wedding-goldDark text-white text-xs font-bold py-2 rounded-lg transition-colors">
+                        Cuba &amp; Sunting Template
+                    </button>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="bg-wedding-nude/40 rounded-2xl p-4 border border-wedding-gold/10 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="moden">
+                    <div class="space-y-3">
+                        <div class="bg-stone-100 rounded-xl h-48 w-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=300&fit=crop');"></div>
+                        <h3 class="font-cinzel font-bold text-base text-stone-900">#08 - Boho Terracotta</h3>
+                        <p class="text-stone-600 text-xs">Warm clay-colored aesthetic with delicate dried palms, modern and earthy wedding vibes.</p>
+                    </div>
+                    <button onclick="applyCatalogTemplate('modern-cream')" class="mt-4 w-full bg-wedding-gold hover:bg-wedding-goldDark text-white text-xs font-bold py-2 rounded-lg transition-colors">
+                        Cuba &amp; Sunting Template
+                    </button>
+                </div>
+
+                <!-- Remaining of the 20 styles are listed in high-converting catalog slots to feel comprehensive -->
+                <div class="bg-wedding-nude/40 rounded-2xl p-4 border border-wedding-gold/10 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="tradisional">
+                    <div class="space-y-3">
+                        <div class="bg-stone-100 rounded-xl h-48 w-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&fit=crop');"></div>
+                        <h3 class="font-cinzel font-bold text-base text-stone-900">#09 - Kebaya Lace Classic</h3>
+                        <p class="text-stone-600 text-xs">Lace textures integrated with modern line borders representing rich wedding attire.</p>
+                    </div>
+                    <button onclick="applyCatalogTemplate('modern-cream')" class="mt-4 w-full bg-wedding-gold hover:bg-wedding-goldDark text-white text-xs font-bold py-2 rounded-lg transition-colors">
+                        Cuba &amp; Sunting Template
+                    </button>
+                </div>
+
+                <div class="bg-wedding-nude/40 rounded-2xl p-4 border border-wedding-gold/10 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="tradisional">
+                    <div class="space-y-3">
+                        <div class="bg-stone-100 rounded-xl h-48 w-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=300&fit=crop');"></div>
+                        <h3 class="font-cinzel font-bold text-base text-stone-900">#10 - Songket Merah Marun</h3>
+                        <p class="text-stone-600 text-xs">Rich maroon base with royal gold border, suitable for highly traditional receptions.</p>
+                    </div>
+                    <button onclick="applyCatalogTemplate('traditional-emerald')" class="mt-4 w-full bg-wedding-gold hover:bg-wedding-goldDark text-white text-xs font-bold py-2 rounded-lg transition-colors">
+                        Cuba &amp; Sunting Template
+                    </button>
+                </div>
+
+                <!-- Quick cards to complete 20 catalog preview representation -->
+                <div class="bg-wedding-nude/40 rounded-2xl p-4 border border-wedding-gold/10 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="moden">
+                    <div class="space-y-3">
+                        <div class="bg-stone-100 rounded-xl h-48 w-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=300&fit=crop');"></div>
+                        <h3 class="font-cinzel font-bold text-base text-stone-900">#11 - Eucalyptus Dream</h3>
+                        <p class="text-stone-600 text-xs">Elegant modern greenery foliage on white backdrop with simple clean fonts.</p>
+                    </div>
+                    <button onclick="applyCatalogTemplate('romantic-garden')" class="mt-4 w-full bg-wedding-gold hover:bg-wedding-goldDark text-white text-xs font-bold py-2 rounded-lg transition-colors">
+                        Cuba &amp; Sunting Template
+                    </button>
+                </div>
+
+                <div class="bg-wedding-nude/40 rounded-2xl p-4 border border-wedding-gold/10 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="mewah">
+                    <div class="space-y-3">
+                        <div class="bg-stone-100 rounded-xl h-48 w-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=300&fit=crop');"></div>
+                        <h3 class="font-cinzel font-bold text-base text-stone-900">#12 - Pearl Champagne</h3>
+                        <p class="text-stone-600 text-xs">Champagne colors with soft sparkling dust overlay, ideal for VIP banquets.</p>
+                    </div>
+                    <button onclick="applyCatalogTemplate('ultra-minimalist')" class="mt-4 w-full bg-wedding-gold hover:bg-wedding-goldDark text-white text-xs font-bold py-2 rounded-lg transition-colors">
+                        Cuba &amp; Sunting Template
+                    </button>
+                </div>
+
+                <!-- Template 13 to 20 grouped together gracefully for space but easily accessible -->
+                <div class="lg:col-span-4 bg-gradient-to-r from-wedding-emerald to-wedding-emeraldLight text-wedding-cream p-8 rounded-2xl border border-wedding-gold/30 flex flex-col justify-between shadow-lg">
+                    <div class="space-y-3">
+                        <span class="text-wedding-accent text-xs font-bold uppercase tracking-widest block">Lagi Banyak Rekaan</span>
+                        <h3 class="font-cinzel font-bold text-2xl">Lagi 8 Tema Eksklusif Melayu Tradisional &amp; Moden</h3>
+                        <p class="opacity-90 text-sm leading-relaxed">
+                            Termasuk batik Terengganu, songket Johor biru, Melaka Nyonya chic, pastel peach, serta tema minimalist hitam-putih. Kesemua 20 template di atas boleh didapati di dalam satu pakej lengkap secara terus!
+                        </p>
+                    </div>
+                    <a href="#pakej" class="mt-6 bg-wedding-gold hover:bg-wedding-goldLight text-stone-950 font-bold text-xs py-3 px-4 rounded-xl text-center tracking-wider transition-colors">
+                        LIHAT &amp; MILIKI SEMUA PAKEJ
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM CONVERTING PRICING SECTION -->
+    <section id="pakej" class="py-20 px-4 bg-gradient-to-b from-white to-wedding-nude border-t border-wedding-gold/15">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center space-y-3 mb-12">
+                <span class="text-wedding-gold font-bold text-sm tracking-widest uppercase block">Harga Mampu Milik</span>
+                <h2 class="font-cinzel font-bold text-3xl md:text-5xl text-stone-900">Pilih Pakej Penjimatan Anda</h2>
+                <p class="text-stone-600 text-sm md:text-base max-w-xl mx-auto">Miliki kad jemputan kahwin digital idaman tanpa membebankan poket.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Pakej 1: Silver -->
+                <div class="bg-white p-8 rounded-3xl shadow-md border border-stone-200 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold tracking-widest text-stone-500 uppercase block">PAKEJ SILVER</span>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-3xl font-black text-stone-900">RM29</span>
+                            <span class="text-stone-500 text-xs line-through">RM99</span>
+                        </div>
+                        <p class="text-stone-600 text-xs">Sesuai untuk majlis ringkas, mudah dan pantas.</p>
+                        <ul class="space-y-2 text-xs text-stone-700 font-medium">
+                            <li><i class="fa-solid fa-check text-wedding-gold mr-2"></i> 1 Pilihan Template Moden</li>
+                            <li><i class="fa-solid fa-check text-wedding-gold mr-2"></i> Integrasi Waze &amp; Google Maps</li>
+                            <li><i class="fa-solid fa-check text-wedding-gold mr-2"></i> Countdown Timer Majlis</li>
+                            <li><i class="fa-solid fa-check text-wedding-gold mr-2"></i> Butang RSVP Terus Ke WhatsApp</li>
+                            <li><i class="fa-solid fa-xmark text-red-500 mr-2"></i> Tiada Muzik Latar Belakang</li>
+                            <li><i class="fa-solid fa-xmark text-red-500 mr-2"></i> Tiada Galeri Gambar</li>
+                        </ul>
+                    </div>
+                    <button onclick="bookingPackage('Silver')" class="w-full bg-stone-900 hover:bg-stone-800 text-white font-bold py-3 rounded-xl text-xs tracking-wider transition-colors">
+                        PILIH PAKEJ SILVER
+                    </button>
+                </div>
+
+                <!-- Pakej 2: Gold (BEST SELLER) -->
+                <div class="bg-white p-8 rounded-3xl shadow-2xl border-2 border-wedding-gold flex flex-col justify-between space-y-6 relative transform -translate-y-2">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-wedding-gold text-white text-[10px] font-black tracking-widest px-4 py-1.5 rounded-full uppercase">
+                        TERLARIS &bull; PALING BERBALOI
+                    </div>
+                    <div class="space-y-4 pt-2">
+                        <span class="text-xs font-bold tracking-widest text-wedding-goldDark uppercase block">PAKEJ GOLD</span>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-4xl font-black text-stone-900">RM49</span>
+                            <span class="text-stone-500 text-xs line-through">RM199</span>
+                        </div>
+                        <p class="text-stone-600 text-xs">Pilihan lengkap untuk pengantin yang inginkan keunikan sejati.</p>
+                        <ul class="space-y-2 text-xs text-stone-700 font-medium">
+                            <li><i class="fa-solid fa-check text-wedding-gold mr-2"></i> <strong>Akses 20+ Template Premium</strong></li>
+                            <li><i class="fa-solid fa-check text-wedding-gold mr-2"></i> Muzik Latar Belakang Eksklusif</li>
+                            <li><i class="fa-solid fa-check text-wedding-gold mr-2"></i> Galeri Foto Pengantin (Hingga 12 Gambar)</li>
+                            <li><i class="fa-solid fa-check text-wedding-gold mr-2"></i> Integrasi Google Maps, Waze &amp; Apple Maps</li>
+                            <li><i class="fa-solid fa-check text-wedding-gold mr-2"></i> Simpan Tarikh ke Kalendar</li>
+                            <li><i class="fa-solid fa-check text-wedding-gold mr-2"></i> Borang RSVP &amp; Buku Ucapan Tetamu</li>
+                            <li><i class="fa-solid fa-check text-wedding-gold mr-2"></i> Khidmat Kemaskini Butiran Percuma</li>
+                        </ul>
+                    </div>
+                    <button onclick="bookingPackage('Gold')" class="w-full bg-gradient-to-r from-wedding-gold to-wedding-goldDark hover:from-wedding-goldDark hover:to-wedding-gold text-white font-bold py-3.5 rounded-xl text-xs tracking-wider transition-all shadow-md">
+                        TEMPAH PAKEJ GOLD SEKARANG
+                    </button>
+                </div>
+
+                <!-- Pakej 3: Royal Platinum -->
+                <div class="bg-wedding-emerald text-wedding-cream p-8 rounded-3xl shadow-md border border-wedding-gold/20 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold tracking-widest text-wedding-accent uppercase block">PAKEJ PLATINUM ROYAL</span>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-3xl font-black">RM99</span>
+                            <span class="opacity-65 text-xs line-through">RM299</span>
+                        </div>
+                        <p class="opacity-90 text-xs">Pilihan eksklusif VIP beserta domain nama pengantin sendiri.</p>
+                        <ul class="space-y-2 text-xs opacity-95">
+                            <li><i class="fa-solid fa-check text-wedding-accent mr-2"></i> Semua Ciri Pakej Gold</li>
+                            <li><i class="fa-solid fa-check text-wedding-accent mr-2"></i> <strong>Domain Khas Nama Anda</strong> (cth: aizatjasmin.com)</li>
+                            <li><i class="fa-solid fa-check text-wedding-accent mr-2"></i> Sistem Kehadiran Kod QR Di Pintu Dewan</li>
+                            <li><i class="fa-solid fa-check text-wedding-accent mr-2"></i> Rekaan Atur Cara Majlis Interaktif</li>
+                            <li><i class="fa-solid fa-check text-wedding-accent mr-2"></i> Tiada Logo AJ Legacy (White Label)</li>
+                        </ul>
+                    </div>
+                    <button onclick="bookingPackage('Platinum')" class="w-full bg-wedding-accent hover:bg-wedding-gold text-stone-950 font-bold py-3 rounded-xl text-xs tracking-wider transition-colors">
+                        TEMPAH ROYAL PLATINUM
+                    </button>
+                </div>
+            </div>
+
+            <!-- Guarantee badge to build customer confidence -->
+            <div class="mt-12 text-center max-w-xl mx-auto p-4 bg-white rounded-2xl border border-stone-200/80 flex items-center justify-center gap-4">
+                <i class="fa-solid fa-shield-halved text-wedding-gold text-3xl"></i>
+                <div class="text-left text-xs text-stone-600">
+                    <p class="font-bold text-stone-900">Jaminan Pulangan Wang 100%</p>
+                    <p>Jika anda tidak berpuas hati dengan kualiti kad atau menghadapi sebarang masalah teknikal dalam masa 14 hari, kami akan pulangkan wang anda tanpa banyak soal.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS (FAQ) -->
+    <section id="soalan" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center space-y-3 mb-12">
+                <span class="text-wedding-gold font-bold text-sm tracking-widest uppercase block">Mahu Kepastian?</span>
+                <h2 class="font-cinzel font-bold text-3xl text-stone-900">Soalan Lazim (FAQ)</h2>
+                <p class="text-stone-600 text-sm max-w-xl mx-auto">Jawapan pantas bagi segala keraguan anda tentang kad jemputan digital.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-wedding-nude/30 rounded-2xl p-6 border border-wedding-gold/10">
+                    <h4 class="font-bold text-stone-900 text-sm md:text-base mb-2">S: Berapa lama kad digital ini akan kekal aktif?</h4>
+                    <p class="text-stone-600 text-xs md:text-sm">J: Kad digital anda akan kekal aktif selama setahun penuh bermula dari tarikh pembelian. Anda boleh berkongsi pautan tersebut seberapa banyak kali yang anda mahu kepada tetamu.</p>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="bg-wedding-nude/30 rounded-2xl p-6 border border-wedding-gold/10">
+                    <h4 class="font-bold text-stone-900 text-sm md:text-base mb-2">S: Bolehkan saya menukar lagu pengiring sendiri?</h4>
+                    <p class="text-stone-600 text-xs md:text-sm">J: Ya! Di bawah Pakej Gold dan Platinum, anda boleh memuat naik lagu MP3 kegemaran anda atau memilih dari perpustakaan lagu romantis kami yang sedia ada.</p>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="bg-wedding-nude/30 rounded-2xl p-6 border border-wedding-gold/10">
+                    <h4 class="font-bold text-stone-900 text-sm md:text-base mb-2">S: Bagaimanakah saya akan menerima maklum balas RSVP tetamu?</h4>
+                    <p class="text-stone-600 text-xs md:text-sm">J: Apabila tetamu mengisi borang RSVP di telefon bimbit mereka, butiran kehadiran akan dihantar secara automatik terus ke nombor WhatsApp yang anda daftarkan. Di samping itu, anda boleh mengakses senarai penuh RSVP tetamu dalam dashboard khas anda.</p>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="bg-wedding-nude/30 rounded-2xl p-6 border border-wedding-gold/10">
+                    <h4 class="font-bold text-stone-900 text-sm md:text-base mb-2">S: Adakah sistem ini sesuai untuk telefon pintar tetamu yang berumur?</h4>
+                    <p class="text-stone-600 text-xs md:text-sm">J: Sangat sesuai! Kami mereka bentuk sistem antaramuka (UI/UX) yang mesra pengguna dengan tulisan yang besar dan butang yang mudah ditekan supaya golongan veteran juga mudah membacanya tanpa kesukaran.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS FROM REAL HAPPY MALAY COUPLES -->
+    <section class="py-20 px-4 bg-wedding-nude/40 border-t border-wedding-gold/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center space-y-3 mb-12">
+                <span class="text-wedding-gold font-bold text-sm tracking-widest uppercase block">Kisah Kejayaan</span>
+                <h2 class="font-cinzel font-bold text-3xl text-stone-900">Apa Kata Pasangan Pengantin Kami?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100 space-y-4">
+                    <div class="flex items-center gap-1 text-wedding-gold text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-stone-600 text-xs italic">"Sangat puas hati! Guna Pakej Gold untuk majlis kami di Shah Alam baru-baru ini. Tetamu puji kad nampak eksklusif sangat sebab ada corak songket emerald yang sangat mewah. RSVP pun senang urus!"</p>
+                    <strong class="block text-stone-950 text-xs font-semibold">- Azrul &amp; Farhana (Shah Alam)</strong>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100 space-y-4">
+                    <div class="flex items-center gap-1 text-wedding-gold text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-stone-600 text-xs italic">"Beli kad petang kelmarin, malam tu dah siap dan boleh hantar ke grup WhatsApp famili. Lagu gamelan pengiring tu buat makcik-makcik teruja bila buka kad. Terbaik AJ Legacy!"</p>
+                    <strong class="block text-stone-950 text-xs font-semibold">- Syamil &amp; Atikah (Kuala Lumpur)</strong>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100 space-y-4">
+                    <div class="flex items-center gap-1 text-wedding-gold text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-stone-600 text-xs italic">"Paling selamatkan bajet perkahwinan kami! Jimat beratus ringgit tak payah print kad banyak-banyak. Kami cuma cetak 50 kad untuk orang tua, selebihnya hantar kad digital ni. 10/10 bintang!"</p>
+                    <strong class="block text-stone-950 text-xs font-semibold">- Khairul &amp; Nadiah (Johor Bahru)</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER WITH TRUST BADGES & BRAND MARK -->
+    <footer class="bg-stone-950 text-stone-400 py-16 px-4 border-t-2 border-wedding-gold">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            
+            <div class="space-y-4 md:col-span-1">
+                <div class="flex items-center gap-3">
+                    <img src="599828.png" alt="AJ Legacy Logo" class="w-10 h-10 rounded-full border border-wedding-gold object-cover" onerror="this.src='https://placehold.co/100x100?text=AJ'">
+                    <div>
+                        <span class="font-cinzel font-bold text-sm tracking-widest text-wedding-gold block">AJ LEGACY</span>
+                        <span class="text-[8px] uppercase tracking-widest text-stone-500 block">Heritage &amp; Innovation</span>
+                    </div>
+                </div>
+                <p class="text-[11px] text-stone-500 leading-relaxed">
+                    Kami komited membawakan transformasi digital kreatif ke dalam majlis adat resam perkahwinan Melayu demi kemudahan anda.
+                </p>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="font-cinzel text-xs font-bold text-wedding-gold tracking-widest uppercase">Pautan Pantas</h4>
+                <ul class="text-xs space-y-2">
+                    <li><a href="#kelebihan" class="hover:text-white transition-colors">Kelebihan Kad</a></li>
+                    <li><a href="#demo" class="hover:text-white transition-colors">Bina Kad Demo</a></li>
+                    <li><a href="#katalog" class="hover:text-white transition-colors">20 Reka Bentuk</a></li>
+                    <li><a href="#pakej" class="hover:text-white transition-colors">Pakej Harga</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="font-cinzel text-xs font-bold text-wedding-gold tracking-widest uppercase">Hubungi Kami</h4>
+                <p class="text-xs leading-relaxed text-stone-500">
+                    Syarikat AJ Legacy Wedding Solutions<br>
+                    Damansara Intan, Petaling Jaya,<br>
+                    Selangor, Malaysia.
+                </p>
+                <p class="text-xs text-wedding-accent">
+                    <i class="fa-solid fa-envelope mr-1"></i> support@ajlegacy.com
+                </p>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="font-cinzel text-xs font-bold text-wedding-gold tracking-widest uppercase">Keselamatan Pembayaran</h4>
+                <p class="text-[11px] text-stone-500">Pembayaran anda diproses secara selamat melalui gerbang pembayaran berdaftar tempatan dengan perlindungan SSL 256-bit.</p>
+                <div class="flex gap-2 text-xl text-stone-500">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 border-t border-stone-800 text-center text-xs text-stone-600 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 AJ Legacy Wedding Solutions. Hak Cipta Terpelihara.</p>
+            <div class="flex gap-4 text-[10px]">
+                <a href="#" class="hover:text-white transition-colors">Polisi Privasi</a>
+                <a href="#" class="hover:text-white transition-colors">Terma &amp; Syarat</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SUCCESS MOCK MODAL FOR SIMULATOR RSVP -->
+    <div id="successModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white p-6 rounded-3xl max-w-sm w-full text-center space-y-4 shadow-2xl border border-wedding-gold/20">
+            <div class="w-14 h-14 bg-wedding-emerald/10 text-wedding-emerald text-3xl rounded-full flex items-center justify-center mx-auto">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="font-cinzel font-bold text-lg text-stone-900">Penghantaran Berjaya!</h3>
+            <p class="text-stone-600 text-xs leading-relaxed" id="modalSuccessMessage">
+                Kehadiran anda telah berjaya dihantar ke sistem demo. Butiran WhatsApp sedia untuk disalurkan ke telefon pengantin.
+            </p>
+            <button onclick="closeSuccessModal()" class="w-full bg-wedding-emerald text-white text-xs font-bold py-3 rounded-xl">
+                Tutup Maklum Balas
+            </button>
+        </div>
+    </div>
+
+    <!-- SALES PAGE TEMPLATE BOOKING CONFIRMATION MODAL -->
+    <div id="bookingModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white p-8 rounded-3xl max-w-md w-full text-center space-y-5 shadow-2xl border-2 border-wedding-gold">
+            <img src="599828.png" alt="AJ Legacy Logo" class="w-16 h-16 rounded-full border-2 border-wedding-gold mx-auto object-cover" onerror="this.src='https://placehold.co/100x100?text=AJ'">
+            <h3 class="font-cinzel font-bold text-xl text-stone-900">Langkah Terakhir Tempahan</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+                Anda telah memilih <strong class="text-wedding-goldDark" id="selectedPackageName">Pakej Gold</strong>. Sila isikan nama dan emel anda untuk kami menjana pautan pendaftaran dan draf kad jemputan serta-merta.
+            </p>
+            <div class="space-y-3 text-left">
+                <input type="text" id="buyerName" placeholder="Nama Penuh Anda" class="w-full px-4 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:border-wedding-gold">
+                <input type="email" id="buyerEmail" placeholder="Alamat Emel Anda" class="w-full px-4 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:border-wedding-gold">
+            </div>
+            <button onclick="proceedToCheckout()" class="w-full bg-gradient-to-r from-wedding-gold to-wedding-goldDark text-white font-bold py-3 rounded-xl text-xs tracking-wider uppercase shadow-md">
+                Teruskan Ke Pembayaran Selamat &rarr;
+            </button>
+            <p class="text-[10px] text-stone-400">Jaminan Pemulangan Wang 14 Hari &bull; Tiada Caj Tersembunyi</p>
+        </div>
+    </div>
+
+    <!-- FLOATING INTERACTIVE CHATBOX ASSISTANT (SIS JASMINE) -->
+    <div id="jasmineChatWidget" class="fixed bottom-6 right-6 z-50 font-sans flex flex-col items-end">
+        
+        <!-- Welcome Speech Bubble Notification (Appears dynamically) -->
+        <div id="jasmineWelcomeBubble" class="bg-white text-stone-800 text-xs font-medium py-2.5 px-4 rounded-2xl rounded-br-none shadow-2xl border border-wedding-gold/30 mb-3 max-w-xs transition-all duration-500 transform scale-0 translate-y-4 opacity-0 flex items-start gap-2">
+            <span class="text-lg">💖</span>
+            <div>
+                <p class="font-semibold text-wedding-goldDark">Sis Jasmine</p>
+                <p class="text-stone-500 text-[11px] mt-0.5">Hi! Cari kad digital premium? Jom sembang dengan Sis, kejap je Sis tolong drafkan yang paling cun!</p>
+            </div>
+            <button onclick="dismissWelcomeBubble()" class="text-stone-400 hover:text-stone-600 text-[10px] ml-1"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- Main Chat Widget Button -->
+        <button onclick="toggleJasmineChat()" class="w-14 h-14 rounded-full bg-gradient-to-tr from-wedding-emerald to-wedding-emeraldLight text-white shadow-2xl flex items-center justify-center border-2 border-wedding-gold relative hover:scale-110 transition-transform duration-300 focus:outline-none">
+            <img src="599828.png" alt="Sis Jasmine Avatar" class="w-full h-full rounded-full object-cover">
+            <!-- Pulsing Active Indicator Dot -->
+            <span class="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full bg-emerald-500 border-2 border-white flex items-center justify-center">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            </span>
+            <!-- Unread Notification Badge -->
+            <span id="jasmineNotificationBadge" class="absolute -top-1 -left-1 bg-red-500 text-white text-[9px] font-bold w-5 h-5 rounded-full flex items-center justify-center border border-white">1</span>
+        </button>
+
+        <!-- Floating Chat Window (Initially Hidden) -->
+        <div id="jasmineChatWindow" class="hidden w-80 sm:w-96 h-[480px] bg-wedding-cream rounded-3xl shadow-2xl border border-wedding-gold/30 flex flex-col overflow-hidden mt-3 transition-all duration-300">
+            
+            <!-- Chat Header -->
+            <div class="bg-gradient-to-r from-wedding-emerald to-wedding-emeraldLight text-white p-4 flex items-center justify-between border-b border-wedding-gold/20">
+                <div class="flex items-center gap-3">
+                    <img src="599828.png" alt="Sis Jasmine Avatar" class="w-10 h-10 rounded-full border border-wedding-gold object-cover">
+                    <div class="text-left">
+                        <span class="font-cinzel font-bold text-xs tracking-wider text-wedding-accent block">SIS JASMINE</span>
+                        <span class="text-[9px] text-emerald-300 flex items-center gap-1">
+                            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse inline-block"></span> 
+                            Aktif &bull; Sedia Membantu
+                        </span>
+                    </div>
+                </div>
+                <button onclick="toggleJasmineChat()" class="text-stone-200 hover:text-white text-sm p-1">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </div>
+
+            <!-- Chat Messages Body -->
+            <div id="jasmineChatMessages" class="flex-1 overflow-y-auto p-4 space-y-3.5 text-xs text-left">
+                <!-- Automated Greeting Message -->
+                <div class="flex items-start gap-2.5 max-w-[85%]">
+                    <img src="599828.png" class="w-7 h-7 rounded-full object-cover border border-wedding-gold/20" alt="Avatar">
+                    <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-stone-100 space-y-1">
+                        <p class="font-semibold text-wedding-goldDark text-[10px]">Sis Jasmine (Wedding Expert)</p>
+                        <p class="text-stone-700 leading-relaxed">
+                            Assalamualaikum &amp; Salam Sejahtera bakal pengantin diraja! 👑
+                        </p>
+                        <p class="text-stone-700 leading-relaxed">
+                            Saya Jasmine, bersedia permudahkan urusan jemputan perkahwinan anda. Boleh saya tahu **Nama Penuh** anda dahulu untuk mulakan draf tempahan?
+                        </p>
+                        <span class="text-[8px] text-stone-400 block pt-1">Baru sahaja</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input Controls -->
+            <div class="p-3 bg-white border-t border-stone-100">
+                <div id="jasmineQuickReplies" class="flex flex-wrap gap-1.5 mb-2.5">
+                    <!-- Dynamic buttons injected via JS -->
+                </div>
+                <div class="flex items-center gap-2">
+                    <input type="text" id="jasmineInput" placeholder="Tulis mesej anda di sini..." onkeypress="handleJasmineKeyPress(event)" class="flex-1 bg-stone-50 px-3.5 py-2.5 rounded-xl border border-stone-200 text-xs focus:outline-none focus:border-wedding-gold">
+                    <button onclick="submitJasmineMessage()" class="w-10 h-10 bg-wedding-emerald hover:bg-wedding-emeraldLight text-white rounded-xl flex items-center justify-center transition-colors shadow-sm">
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </button>
+                </div>
+                <span class="text-[9px] text-stone-400 block text-center mt-2">Draf tempahan dihantar terus ke WhatsApp 011-27881742</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT LOGIC (Interactive Elements, Live Customizer, Countdown Timer, Web Audio API Synthesizer) -->
+    <script>
+        // State variables
+        let currentTheme = 'modern-cream';
+        let audioContext = null;
+        let synthesizerInterval = null;
+        let isAudioPlaying = false;
+        let countdownInterval = null;
+
+        // Chat Widget State
+        let chatStep = 1;
+        let orderDetails = {
+            nama: '',
+            pakej: '',
+            tarikh: '',
+            telefon: ''
+        };
+
+        // On document load, initiate real-time listeners and setup default states
+        window.onload = function() {
+            setTheme('modern-cream');
+            updatePreview();
+            startCountdown();
+
+            // Trigger Jasmine's welcome bubble after 3 seconds
+            setTimeout(() => {
+                const bubble = document.getElementById('jasmineWelcomeBubble');
+                if (bubble) {
+                    bubble.classList.remove('scale-0', 'translate-y-4', 'opacity-0');
+                    bubble.classList.add('scale-100', 'translate-y-0', 'opacity-100');
+                }
+            }, 3000);
+        }
+
+        // Apply Theme configurations to phone preview simulator
+        function setTheme(themeName) {
+            currentTheme = themeName;
+            
+            // Highlight chosen theme button in editor
+            document.querySelectorAll('.theme-select-btn').forEach(btn => {
+                btn.classList.remove('border-wedding-gold', 'border-2');
+                btn.classList.add('border-stone-200');
+            });
+            const selectedBtn = document.getElementById(`btn-theme-${themeName}`);
+            if (selectedBtn) {
+                selectedBtn.classList.add('border-wedding-gold', 'border-2');
+                selectedBtn.classList.remove('border-stone-200');
+            }
+
+            // Apply selected theme CSS classes to phone inner wrapper
+            const previewWrapper = document.getElementById('previewThemeWrapper');
+            previewWrapper.className = "theme-preview-wrapper h-full overflow-y-auto pt-6 pb-12 transition-all duration-500";
+            
+            if (themeName === 'modern-cream') {
+                previewWrapper.classList.add('preview-theme-modern-cream');
+            } else if (themeName === 'traditional-emerald') {
+                previewWrapper.classList.add('preview-theme-traditional-emerald');
+            } else if (themeName === 'ultra-minimalist') {
+                previewWrapper.classList.add('preview-theme-ultra-minimalist');
+            } else if (themeName === 'luxury-black') {
+                previewWrapper.classList.add('preview-theme-luxury-black');
+            } else if (themeName === 'romantic-garden') {
+                previewWrapper.classList.add('preview-theme-romantic-garden');
+            }
+
+            // Trigger visual update
+            updatePreview();
+        }
+
+        // Read form inputs and instantly update previewer layout text
+        function updatePreview() {
+            const groom = document.getElementById('inputGroom').value || 'Pengantin Lelaki';
+            const bride = document.getElementById('inputBride').value || 'Pengantin Perempuan';
+            const rawDate = document.getElementById('inputDate').value || '2026-12-12';
+            const time = document.getElementById('inputTime').value || '11:00 Pagi - 4:00 Petang';
+            const venue = document.getElementById('inputVenue').value || 'Lokasi Majlis';
+
+            // Convert raw HTML date to readable Malay Wedding Format
+            const dateObj = new Date(rawDate);
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            let formattedMalayDate = dateObj.toLocaleDateString('ms-MY', options).toUpperCase();
+            if (isNaN(dateObj.getTime())) {
+                formattedMalayDate = 'SABTU, 12 DISEMBER 2026';
+            }
+
+            // Update preview values
+            document.getElementById('prevTitleNames').innerText = `${groom} & ${bride}`;
+            document.getElementById('prevDateText').innerText = formattedMalayDate;
+            document.getElementById('prevGroomName').innerText = groom;
+            document.getElementById('prevBrideName').innerText = bride;
+            document.getElementById('prevFullDate').innerText = formattedMalayDate;
+            document.getElementById('prevTimeLabel').innerText = time;
+            document.getElementById('prevVenueLabel').innerText = venue;
+
+            // Restart countdown with new date value
+            startCountdown();
+        }
+
+        // Live Countdown Calculation
+        function startCountdown() {
+            if (countdownInterval) clearInterval(countdownInterval);
+
+            const dateValue = document.getElementById('inputDate').value || '2026-12-12';
+            const targetDate = new Date(`${dateValue}T11:00:00`).getTime();
+
+            function tick() {
+                const now = new Date().getTime();
+                const difference = targetDate - now;
+
+                if (difference < 0) {
+                    document.getElementById('daysVal').innerText = "00";
+                    document.getElementById('hoursVal').innerText = "00";
+                    document.getElementById('minsVal').innerText = "00";
+                    document.getElementById('secsVal').innerText = "00";
+                    return;
+                }
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('daysVal').innerText = days < 10 ? '0' + days : days;
+                document.getElementById('hoursVal').innerText = hours < 10 ? '0' + hours : hours;
+                document.getElementById('minsVal').innerText = minutes < 10 ? '0' + minutes : minutes;
+                document.getElementById('secsVal').innerText = seconds < 10 ? '0' + seconds : seconds;
+            }
+
+            tick();
+            countdownInterval = setInterval(tick, 1000);
+        }
+
+        // Open Envelope Cover within simulated mobile display
+        function openInvitationInsideMockup() {
+            // Smoothly hide cover, reveal core RSVP site details
+            document.getElementById('previewCoverScreen').classList.add('hidden');
+            document.getElementById('previewMainDetails').classList.remove('hidden');
+
+            // Automatically play background synthesizer audio
+            if (!isAudioPlaying) {
+                toggleAudio();
+            }
+        }
+
+        // Synthesize romantic melodies using Web Audio API so it plays on any device instantly without external file dependencies
+        function toggleAudio() {
+            const icon = document.getElementById('audioIcon');
+            const visualizer = document.getElementById('audioVisualizer');
+
+            if (isAudioPlaying) {
+                // Stop audio
+                if (synthesizerInterval) clearInterval(synthesizerInterval);
+                isAudioPlaying = false;
+                icon.className = "fa-solid fa-music";
+                visualizer.classList.add('hidden');
+            } else {
+                // Start Synthesizer audio loops
+                isAudioPlaying = true;
+                icon.className = "fa-solid fa-pause text-red-500";
+                visualizer.classList.remove('hidden');
+                playWeddingChimeSynthesizer();
+            }
+        }
+
+        function playWeddingChimeSynthesizer() {
+            // Setup audio context safely
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+
+            let step = 0;
+            // A dreamy sweet classic C major / G major / A minor / F major progression for weddings
+            const melodies = {
+                'gamelan': [523.25, 587.33, 659.25, 783.99, 880.00, 783.99, 659.25, 587.33], // Gamelan-like pentatonic ring
+                'violin': [261.63, 329.63, 392.00, 329.63, 293.66, 349.23, 440.00, 349.23], // Smooth slow arpeggio
+                'acoustic': [329.63, 392.00, 493.88, 392.00, 261.63, 329.63, 392.00, 329.63] // Chime acoustic feel
+            };
+
+            function playNote(freq, duration, type = 'sine') {
+                if (!audioContext || audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+                const osc = audioContext.createOscillator();
+                const gain = audioContext.createGain();
+
+                osc.type = type;
+                osc.frequency.setValueAtTime(freq, audioContext.currentTime);
+
+                gain.gain.setValueAtTime(0.08, audioContext.currentTime);
+                // Soft fade out
+                gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + duration);
+
+                osc.connect(gain);
+                gain.connect(audioContext.destination);
+
+                osc.start();
+                osc.stop(audioContext.currentTime + duration);
+            }
+
+            // Loop notes
+            synthesizerInterval = setInterval(() => {
+                const selection = document.getElementById('inputMusic').value;
+                const noteList = melodies[selection] || melodies['violin'];
+                const freq = noteList[step % noteList.length];
+                
+                // Add soft lower octave bass note for rich romantic harmony
+                if (step % 4 === 0) {
+                    playNote(freq / 2, 1.8, 'triangle');
+                }
+                
+                // Play melodic high note
+                playNote(freq, 0.8, 'sine');
+                step++;
+            }, 600);
+        }
+
+        // Change music selection mid play
+        function updateMusicSelection() {
+            if (isAudioPlaying) {
+                // Restart visualizer melody loops with new settings
+                if (synthesizerInterval) clearInterval(synthesizerInterval);
+                playWeddingChimeSynthesizer();
+            }
+        }
+
+        // RSVP Submission Simulation within live simulator
+        function submitRSVPSimulation() {
+            const guestName = document.getElementById('simGuestName').value;
+            const status = document.getElementById('simGuestAttendance').value;
+            const messageText = document.getElementById('modalSuccessMessage');
+
+            if (!guestName.trim()) {
+                alert("Sila isi nama tetamu terlebih dahulu untuk demo RSVP.");
+                return;
+            }
+
+            // Inject the new guest wish directly into the live preview wish wall!
+            const wishesContainer = document.getElementById('prevWishesContainer');
+            const newWish = document.createElement('div');
+            newWish.className = "border-t border-stone-100 pt-1.5 mt-1.5";
+            newWish.innerHTML = `<strong class="text-wedding-goldDark">${guestName}:</strong> <span class="text-stone-500">Tahniah! Saya memilih untuk ${status === 'hadir' ? 'Hadir ke majlis ini' : 'Tidak Hadir'} dan mendoakan kebahagiaan berpanjangan.</span>`;
+            wishesContainer.prepend(newWish);
+
+            // Setup custom success message for modal
+            messageText.innerHTML = `Terima kasih <strong>${guestName}</strong>! RSVP anda (Kehadiran: <strong>${status === 'hadir' ? 'Hadir' : 'Tidak Hadir'}</strong>) telah berjaya disimpan. Dalam aplikasi sebenar, satu butang mesej bersedia dihantar ke WhatsApp pengantin untuk rujukan pantas!`;
+            
+            // Show custom success modal (avoiding browser standard alert)
+            document.getElementById('successModal').classList.remove('hidden');
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.add('hidden');
+        }
+
+        // Catalog sorting / filter
+        function filterCatalog(category) {
+            // Update active state class on filter tabs
+            document.querySelectorAll('.filter-tab').forEach(btn => {
+                btn.className = "px-5 py-2 rounded-full text-xs font-semibold bg-wedding-nude text-stone-700 hover:bg-wedding-gold hover:text-white transition-colors filter-tab";
+            });
+            event.target.className = "px-5 py-2 rounded-full text-xs font-semibold bg-wedding-gold text-white shadow-md transition-colors filter-tab";
+
+            const cards = document.querySelectorAll('#catalogGrid > div');
+            cards.forEach(card => {
+                if (category === 'semua') {
+                    card.classList.remove('hidden');
+                } else {
+                    const cardCat = card.getAttribute('data-category');
+                    if (cardCat === category) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        // Apply a template directly from the catalog cards to the mobile previewer
+        function applyCatalogTemplate(themeKey) {
+            setTheme(themeKey);
+            // Scroll smoothly to customizer / preview screen so user can view edit in action
+            document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+            
+            // Automatically open invitation cover in simulator
+            setTimeout(() => {
+                openInvitationInsideMockup();
+            }, 800);
+        }
+
+        // Pricing package purchase handler
+        function bookingPackage(pakejName) {
+            document.getElementById('selectedPackageName').innerText = `Pakej ${pakejName}`;
+            document.getElementById('bookingModal').classList.remove('hidden');
+        }
+
+        function proceedToCheckout() {
+            const name = document.getElementById('buyerName').value;
+            const email = document.getElementById('buyerEmail').value;
+
+            if (!name.trim() || !email.trim()) {
+                alert("Sila isi Nama Penuh dan Emel untuk menjana draf jemputan digital perkahwinan anda.");
+                return;
+            }
+
+            // Close modal and show simulated transaction success
+            document.getElementById('bookingModal').classList.add('hidden');
+            
+            // Show successful mockup message
+            const messageText = document.getElementById('modalSuccessMessage');
+            messageText.innerHTML = `Terima kasih <strong>${name}</strong>! Pendaftaran anda untuk draf kad jemputan kahwin digital AJ Legacy telah berjaya dimulakan. Kami telah menghantar maklumat log masuk pembinaan draf ke emel: <strong>${email}</strong>. Sila semak peti masuk emel anda!`;
+            document.getElementById('successModal').classList.remove('hidden');
+        }
+
+        /* SIS JASMINE FLOATING CHATBOX LOGIC */
+        function dismissWelcomeBubble() {
+            const bubble = document.getElementById('jasmineWelcomeBubble');
+            if (bubble) {
+                bubble.classList.add('scale-0', 'opacity-0');
+            }
+            event.stopPropagation();
+        }
+
+        function toggleJasmineChat() {
+            const chatWindow = document.getElementById('jasmineChatWindow');
+            const badge = document.getElementById('jasmineNotificationBadge');
+            
+            if (chatWindow.classList.contains('hidden')) {
+                chatWindow.classList.remove('hidden');
+                dismissWelcomeBubble();
+                if (badge) badge.classList.add('hidden');
+                scrollToBottomOfJasmineChat();
+            } else {
+                chatWindow.classList.add('hidden');
+            }
+        }
+
+        function scrollToBottomOfJasmineChat() {
+            const chatBody = document.getElementById('jasmineChatMessages');
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function handleJasmineKeyPress(event) {
+            if (event.key === 'Enter') {
+                submitJasmineMessage();
+            }
+        }
+
+        function appendUserMessage(text) {
+            const chatBody = document.getElementById('jasmineChatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = "flex items-start justify-end gap-2.5 ml-auto max-w-[85%]";
+            messageDiv.innerHTML = `
+                <div class="bg-wedding-emerald text-white p-3 rounded-2xl rounded-tr-none shadow-sm space-y-1">
+                    <p class="font-semibold text-wedding-accent text-[10px]">Anda</p>
+                    <p class="leading-relaxed">${text}</p>
+                </div>
+            `;
+            chatBody.appendChild(messageDiv);
+            scrollToBottomOfJasmineChat();
+        }
+
+        function appendJasmineMessage(text, hasQuickReplies = false) {
+            const chatBody = document.getElementById('jasmineChatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = "flex items-start gap-2.5 max-w-[85%] animate-fade-in";
+            messageDiv.innerHTML = `
+                <img src="599828.png" class="w-7 h-7 rounded-full object-cover border border-wedding-gold/20" alt="Avatar">
+                <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-stone-100 space-y-1">
+                    <p class="font-semibold text-wedding-goldDark text-[10px]">Sis Jasmine (Wedding Expert)</p>
+                    <p class="text-stone-700 leading-relaxed">${text}</p>
+                    <span class="text-[8px] text-stone-400 block pt-1">Baru sahaja</span>
+                </div>
+            `;
+            chatBody.appendChild(messageDiv);
+            scrollToBottomOfJasmineChat();
+        }
+
+        function showJasmineTyping(callback) {
+            const chatBody = document.getElementById('jasmineChatMessages');
+            const typingDiv = document.createElement('div');
+            typingDiv.id = "jasmineTypingIndicator";
+            typingDiv.className = "flex items-start gap-2.5 max-w-[85%]";
+            typingDiv.innerHTML = `
+                <img src="599828.png" class="w-7 h-7 rounded-full object-cover border border-wedding-gold/20" alt="Avatar">
+                <div class="bg-white p-2.5 rounded-2xl rounded-tl-none border border-stone-100 flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 bg-stone-400 rounded-full animate-bounce"></span>
+                    <span class="w-1.5 h-1.5 bg-stone-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></span>
+                    <span class="w-1.5 h-1.5 bg-stone-400 rounded-full animate-bounce" style="animation-delay: 0.4s"></span>
+                </div>
+            `;
+            chatBody.appendChild(typingDiv);
+            scrollToBottomOfJasmineChat();
+
+            setTimeout(() => {
+                const indicator = document.getElementById('jasmineTypingIndicator');
+                if (indicator) indicator.remove();
+                callback();
+            }, 1200);
+        }
+
+        function submitJasmineMessage() {
+            const input = document.getElementById('jasmineInput');
+            const text = input.value.trim();
+            if (!text) return;
+
+            appendUserMessage(text);
+            input.value = '';
+
+            processJasmineState(text);
+        }
+
+        function selectJasmineQuickReply(replyText) {
+            appendUserMessage(replyText);
+            const qrContainer = document.getElementById('jasmineQuickReplies');
+            qrContainer.innerHTML = ''; // Clear quick replies
+            processJasmineState(replyText);
+        }
+
+        function processJasmineState(userResponse) {
+            if (chatStep === 1) {
+                // Customer provided Name
+                orderDetails.nama = userResponse;
+                chatStep = 2;
+                showJasmineTyping(() => {
+                    appendJasmineMessage(`Sangat cantik nama tu! Salam perkenalan ${orderDetails.nama}. ✨<br><br>Untuk memudahkan Sis lock diskaun 75% promosi hari ini, **Pakej Kad RSVP** mana yang berkenan di hati anda?`);
+                    
+                    // Present Quick Replies for Packages
+                    const qrContainer = document.getElementById('jasmineQuickReplies');
+                    qrContainer.innerHTML = `
+                        <button onclick="selectJasmineQuickReply('Pakej Silver (RM29)')" class="bg-stone-100 hover:bg-wedding-gold hover:text-white text-stone-700 text-[10px] font-semibold py-1.5 px-3 rounded-full transition-colors border border-stone-200">Silver (RM29)</button>
+                        <button onclick="selectJasmineQuickReply('Pakej Gold (RM49) [Recommended]')" class="bg-wedding-gold text-white hover:bg-wedding-goldDark text-[10px] font-semibold py-1.5 px-3 rounded-full transition-colors border border-wedding-gold">Gold (RM49) 🔥</button>
+                        <button onclick="selectJasmineQuickReply('Pakej Royal Platinum (RM99)')" class="bg-stone-900 hover:bg-stone-800 text-white text-[10px] font-semibold py-1.5 px-3 rounded-full transition-colors">Platinum (RM99)</button>
+                    `;
+                });
+            } 
+            else if (chatStep === 2) {
+                // Customer chose package
+                orderDetails.pakej = userResponse;
+                chatStep = 3;
+                showJasmineTyping(() => {
+                    appendJasmineMessage(`Pilihan yang sangat bijak! Pakej ni memang antara yang paling popular. 😍<br><br>Seterusnya, boleh Sis tahu **Tarikh Majlis Perkahwinan** dan **No. Telefon** anda untuk mudahkan proses pendaftaran sistem RSVP kelak?`);
+                });
+            } 
+            else if (chatStep === 3) {
+                // Customer provided date and contact
+                orderDetails.telefon = userResponse;
+                chatStep = 4;
+                showJasmineTyping(() => {
+                    appendJasmineMessage(`Alhamdulillah, semua maklumat tempahan anda telah sedia didrafkan secara rasmi oleh Sis! ❤️<br><br>Berikut draf draf tempahan anda:<br>📍 **Nama**: ${orderDetails.nama}<br>📦 **Pakej**: ${orderDetails.pakej}<br>🗓️ **Butiran**: ${orderDetails.telefon}<br><br>Sila klik butang di bawah untuk hantar butiran ini terus ke talian WhatsApp rasmi Kak Jasmine bagi proses penyerahan draf kad digital anda!`);
+                    
+                    // Insert a direct CTA WhatsApp button into chat messages
+                    const chatBody = document.getElementById('jasmineChatMessages');
+                    const linkDiv = document.createElement('div');
+                    linkDiv.className = "p-3 bg-wedding-emerald/10 border border-wedding-gold/20 rounded-2xl text-center space-y-2 mt-2";
+                    
+                    // Format message string
+                    const waText = encodeURIComponent(`Hi Kak Jasmine! Saya baru selesai isi draf di Landing Page AJ Legacy.\n\nNama: ${orderDetails.nama}\nPilihan: ${orderDetails.pakej}\nButiran Majlis: ${orderDetails.telefon}`);
+                    
+                    linkDiv.innerHTML = `
+                        <p class="text-[10px] text-stone-700 font-semibold">Sedia Untuk Diaktifkan</p>
+                        <a href="https://wa.me/601127881742?text=${waText}" target="_blank" class="block w-full text-center bg-gradient-to-r from-wedding-gold to-wedding-goldDark text-white text-[11px] font-bold py-2.5 rounded-xl shadow-md uppercase tracking-wider">
+                            <i class="fa-brands fa-whatsapp text-sm mr-1"></i> Hantar Ke WhatsApp (011-27881742)
+                        </a>
+                    `;
+                    chatBody.appendChild(linkDiv);
+                    scrollToBottomOfJasmineChat();
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+
+
